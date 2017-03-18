@@ -8,26 +8,42 @@
          <table class="table table-bordered">
                     <tr>
                         <td>
-                            <asp:Label ID="Etiket1" runat="server" Text="Kurs Adı    :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
+                            <asp:Label ID="Etiket1" runat="server" Text="Film Adı    :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtkursAdi" CssClass="form-control" runat="server"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Etiket2" runat="server" Text="Kurs Saati :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtkurssaati" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox ID="txtFilmAdi" CssClass="form-control" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label ID="Etiket3" runat="server" Text="Kurs Ücreti :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
+                            <asp:Label ID="Etiket2" runat="server" Text="Film Yılı :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtkursucreti" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox ID="txtFilmYili" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="Etiket3" runat="server" Text="Film Turu :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtFilmTuru" CssClass="form-control" runat="server" ></asp:TextBox>
+                        </td>
+                    </tr>
+             <tr>
+                        <td>
+                            <asp:Label ID="Etiket4" runat="server" Text="Yönetmen :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtFilmYönetmen" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                        </td>
+                    </tr>
+             <tr>
+                        <td>
+                            <asp:Label ID="Etiket5" runat="server" Text="Aktör :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtFilmAktor" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -42,9 +58,9 @@
                     <table class="table table-bordered">
                         <thead style="color: slateblue">
                             <tr>
-                                <th>Kurs Adı</th>
-                                <th>Kurs Saati</th>
-                                <th>Kurs Ücreti</th>
+                                <th>Film Adı</th>
+                                <th>Film Saati</th>
+                                <th>Film Ücreti</th>
                                 <th>Sil    -    Güncelle</th>
                             </tr>
                         </thead>
@@ -52,12 +68,14 @@
                             <asp:Repeater ID="Tekrar1" runat="server">
                                 <ItemTemplate>
                                     <tr>
-                                        <td><%#Eval("kursAdi") %></td>
-                                        <td><%#Eval("kursUcret") %></td>
-                                        <td><%#Eval("kursSaati") %></td>
+                                        <td><%#Eval("FilmAdi") %></td>
+                                        <td><%#Eval("FilmYili") %></td>
+                                        <td><%#Eval("FilmTuru") %></td>
+                                        <td><%#Eval("YonetmenNo") %></td>
+                                        <td><%#Eval("AktorNo") %></td>
                                         <td>
-                                            <a href="kurslar.aspx?ID=<%#Eval("kursID") %>" class="btn btn-primary">Sil</a>
-                                             <a href="kurslar.aspx?GID=<%#Eval("kursID") %>" class="btn btn-success">Güncelle</a>
+                                            <a href="Filmlar.aspx?ID=<%#Eval("FilmNo") %>" class="btn btn-primary">Sil</a>
+                                             <a href="Filmlar.aspx?GID=<%#Eval("FilmNo") %>" class="btn btn-success">Güncelle</a>
                                         </td>
                                     </tr>
                                 </ItemTemplate>

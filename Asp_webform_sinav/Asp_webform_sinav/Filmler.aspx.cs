@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,11 +12,11 @@ namespace Asp_webform_sinav
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            sing(EntityBaglan database = new EntityBaglan())
-            {
-                Tekrar1.DataSource = database.Kurslar.ToList();
-                Tekrar1.DataBind();
-            }
+            //using (EntityModel Database = new EntityModel())
+            //{
+            //    Tekrar1.DataSource = Database.Movie.ToList();
+            //    Tekrar1.DataBind();
+            //}
 
             if (!IsPostBack)
             {
@@ -23,10 +24,10 @@ namespace Asp_webform_sinav
                 {
                     int id = int.Parse(Request.QueryString["ID"]);
 
-                    using (EntityBaglan database = new EntityBaglan())
+                    using (EntityModel database = new EntityModel())
                     {
-                        var deger = database.Kurslar.Find(id);
-                        database.Kurslar.Remove(deger);
+                        var deger = database.Movie.Find(id);
+                        database.Movie.Remove(deger);
                         database.SaveChanges();
                         Response.Redirect("Kurslar.aspx");
                     }
@@ -36,16 +37,61 @@ namespace Asp_webform_sinav
                 {
                     int gid = int.Parse(Request.QueryString["GID"]);
 
-                    using (EntityBaglan database = new EntityBaglan())
+                    using (EntityModel database = new EntityModel())
                     {
-                        var deger = database.Kurslar.Find(gid);
-                        txtkursAdi.Text = deger.kursAdi;
-                        txtkurssaati.Text = Convert.ToString(deger.kursSaati);
-                        txtkursucreti.Text = Convert.ToString(deger.KursUcret);
+                        var deger = database.Movie.Find(gid);
+                        txtFilmAdi.Text = deger.FilmAdi;
+                        txtFilmYili.Text = Convert.ToString(deger.FilmYili);
+                        txtFilmTuru.Text = deger.FilmTuru;
+                        txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenNo);
+                        txtFilmAktor.Text = Convert.ToString(deger.AktorNo);
 
                     }
                 }
             }
+        }
+
+        protected void butonKaydet_Click(object sender, EventArgs e)
+        {
+            if (txtFilmAdi.Text != "" && txtFilmYili.Text != "" && txtFilmTuru.Text != "" && txtFilmYönetmen.Text != "" && txtFilmAktor.Text != "")
+            {
+
+                using (EntityModel database = new EntityModel())
+                {
+                    Models.Movie film = new Models.Movie();
+                    film.FilmAdi = txtFilmAdi.Text;
+                    film.FilmYili = txtFilmYili.Text;
+                    film.FilmTuru = txtFilmTuru.Text;
+                    film.YonetmenNo = Convert.ToInt32(txtFilmYönetmen.Text);
+                    film.AktorNo = Convert.ToInt32(txtFilmAktor.Text);
+
+                    database.Movie.Add(film);
+                    database.SaveChanges();
+                }
+                Response.Redirect("Kurslar.aspx");
+            }
+        }
+
+
+        protected void butonGuncelle_Click(object sender, EventArgs e)
+        {
+            if (Request.QueryString["GID"] != null)
+            {
+                using (EntityModel database = new EntityModel())
+                {
+                    int gid = int.Parse(Request.QueryString["GID"]);
+                    var deger = database.Movie.Find(gid);
+                    txtFilmAdi.Text = deger.FilmAdi;
+                    txtFilmYili.Text = Convert.ToString(deger.FilmYili);
+                    txtFilmTuru.Text = deger.FilmTuru;
+                    txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenNo);
+                    txtFilmAktor.Text = Convert.ToString(deger.AktorNo);
+
+                    database.SaveChanges();
+                }
+                Response.Redirect("Filmler.aspx");
+            }
+
         }
     }
 }

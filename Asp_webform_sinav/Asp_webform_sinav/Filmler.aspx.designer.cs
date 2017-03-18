@@ -22,13 +22,13 @@ namespace Asp_webform_sinav {
         protected global::System.Web.UI.WebControls.Label Etiket1;
         
         /// <summary>
-        /// txtkursAdi control.
+        /// txtFilmAdi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtkursAdi;
+        protected global::System.Web.UI.WebControls.TextBox txtFilmAdi;
         
         /// <summary>
         /// Etiket2 control.
@@ -40,13 +40,13 @@ namespace Asp_webform_sinav {
         protected global::System.Web.UI.WebControls.Label Etiket2;
         
         /// <summary>
-        /// txtkurssaati control.
+        /// txtFilmYili control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtkurssaati;
+        protected global::System.Web.UI.WebControls.TextBox txtFilmYili;
         
         /// <summary>
         /// Etiket3 control.
@@ -58,13 +58,49 @@ namespace Asp_webform_sinav {
         protected global::System.Web.UI.WebControls.Label Etiket3;
         
         /// <summary>
-        /// txtkursucreti control.
+        /// txtFilmTuru control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtkursucreti;
+        protected global::System.Web.UI.WebControls.TextBox txtFilmTuru;
+        
+        /// <summary>
+        /// Etiket4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiket4;
+        
+        /// <summary>
+        /// txtFilmYönetmen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFilmYönetmen;
+        
+        /// <summary>
+        /// Etiket5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Etiket5;
+        
+        /// <summary>
+        /// txtFilmAktor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFilmAktor;
         
         /// <summary>
         /// butonKaydet control.
