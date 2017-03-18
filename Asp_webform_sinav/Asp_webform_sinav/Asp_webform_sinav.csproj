@@ -111,6 +111,7 @@
     <Content Include="SiteMasterPage.Master" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Yonetmen.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -124,7 +125,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Director.aspx" />
     <Content Include="Filmler.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -152,13 +152,6 @@
     <Compile Include="Aktorler.aspx.designer.cs">
       <DependentUpon>Aktorler.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Director.aspx.cs">
-      <DependentUpon>Director.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Director.aspx.designer.cs">
-      <DependentUpon>Director.aspx</DependentUpon>
-    </Compile>
     <Compile Include="EntityModel.cs" />
     <Compile Include="Filmler.aspx.cs">
       <DependentUpon>Filmler.aspx</DependentUpon>
@@ -177,6 +170,13 @@
     </Compile>
     <Compile Include="SiteMasterPage.Master.designer.cs">
       <DependentUpon>SiteMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetmen.aspx.cs">
+      <DependentUpon>Yonetmen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetmen.aspx.designer.cs">
+      <DependentUpon>Yonetmen.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

@@ -7,13 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace Asp_webform_sinav
 {
-    public partial class Director : System.Web.UI.Page
+    public partial class Yonetmen : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             //using (EntityModel Database = new EntityModel())
             //{
-            //    Tekrar1.DataSource = Database.Movie.ToList();
+            //    Tekrar1.DataSource = Database.Director.ToList();
             //    Tekrar1.DataBind();
             //}
 
@@ -28,7 +28,7 @@ namespace Asp_webform_sinav
                         var deger = database.Director.Find(id);
                         database.Director.Remove(deger);
                         database.SaveChanges();
-                        Response.Redirect("Aktorler.aspx");
+                        Response.Redirect("Yonetmen.aspx");
                     }
                 }
 
@@ -39,9 +39,7 @@ namespace Asp_webform_sinav
                     using (EntityModel database = new EntityModel())
                     {
                         var deger = database.Director.Find(gid);
-                        txtYonetmenAdi.Text =deger.txtYonetmenAdi ;
-                        
-
+                        txtYonetmenAdi.Text = deger.YonetmenAdi;
                     }
                 }
             }
@@ -49,19 +47,18 @@ namespace Asp_webform_sinav
 
         protected void butonKaydet_Click(object sender, EventArgs e)
         {
-            if (txtYonetmenAdi.Text != "" )
+            if (txtYonetmenAdi.Text != "")
             {
 
                 using (EntityModel database = new EntityModel())
                 {
                     Models.Director yonetmen = new Models.Director();
                     yonetmen.YonetmenAdi = txtYonetmenAdi.Text;
-                    
 
                     database.Director.Add(yonetmen);
                     database.SaveChanges();
                 }
-                Response.Redirect("Aktorler.aspx");
+                Response.Redirect("Yonetmen.aspx");
             }
         }
 
@@ -74,11 +71,12 @@ namespace Asp_webform_sinav
                 {
                     int gid = int.Parse(Request.QueryString["GID"]);
                     var deger = database.Director.Find(gid);
-                    
+                    txtYonetmenAdi.Text = deger.YonetmenAdi;
+
 
                     database.SaveChanges();
                 }
-                Response.Redirect("Aktorler.aspx");
+                Response.Redirect("Yonetmen.aspx");
             }
 
         }

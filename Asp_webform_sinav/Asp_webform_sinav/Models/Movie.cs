@@ -15,10 +15,10 @@ namespace Asp_webform_sinav.Models
         public string FilmYili { get; set; }
         public string FilmTuru { get; set; }
 
-        [ForeignKey("Director")]
-        public int YonetmenNo { get; set; }
+        [ForeignKey("YonetmenNo")]
+        public virtual int YonetmenNo { get; set; }
 
-        [ForeignKey("Actor")]
-        public int AktorNo { get; set; }
+        [ForeignKey("AktorNo")]
+        public virtual int AktorNo { get; set; }
     }
 }
