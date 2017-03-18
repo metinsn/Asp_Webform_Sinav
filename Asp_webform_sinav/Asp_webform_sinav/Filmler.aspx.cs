@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Asp_webform_sinav
 {
@@ -29,7 +23,7 @@ namespace Asp_webform_sinav
                         var deger = database.Movie.Find(id);
                         database.Movie.Remove(deger);
                         database.SaveChanges();
-                        Response.Redirect("Kurslar.aspx");
+                        Response.Redirect("Filmler.aspx");
                     }
                 }
 
@@ -68,7 +62,7 @@ namespace Asp_webform_sinav
                     database.Movie.Add(film);
                     database.SaveChanges();
                 }
-                Response.Redirect("Kurslar.aspx");
+                Response.Redirect("Filmler.aspx");
             }
         }
 

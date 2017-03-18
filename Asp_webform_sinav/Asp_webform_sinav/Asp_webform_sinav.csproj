@@ -119,10 +119,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Aktorler.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Director.aspx" />
     <Content Include="Filmler.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -143,6 +145,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aktorler.aspx.cs">
+      <DependentUpon>Aktorler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aktorler.aspx.designer.cs">
+      <DependentUpon>Aktorler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Director.aspx.cs">
+      <DependentUpon>Director.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Director.aspx.designer.cs">
+      <DependentUpon>Director.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EntityModel.cs" />
     <Compile Include="Filmler.aspx.cs">
       <DependentUpon>Filmler.aspx</DependentUpon>
