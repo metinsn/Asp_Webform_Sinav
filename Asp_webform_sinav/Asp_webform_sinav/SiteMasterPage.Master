@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMasterPage.master.cs" Inherits="Asp_webform_sinav.SiteMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>IMDB Film Arşiv Sitesi</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="col-lg-12" style="border: double; background-color: aqua; text-align: center; font-style: italic; font-size-adjust: inherit">
+        <h1>IMDB Film Arşiv Sitesi</h1>
+    </div>
+
+    <div class="col-lg-12" style="background-color:aquamarine;border:medium;text-align:left">
+        <h4 style="text-align:left;color:blueviolet">Sayfalar   :</h4>
+        <button type="button" class="btn btn-warning">Filmler</button>
+        <button type="button" class="btn btn-warning">Yönetmenler</button>
+        <button type="button" class="btn btn-warning">Aktörler</button>
+    </div>
+
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="col-lg-12" style="border: double; background-color: burlywood; text-align: center; font-style: italic; font-size-adjust: inherit">
+            <h4>HAKKINDA :</h4>
+            <h6>Kullanım Hakkı Yoktur free'dir isteyen alabilir.</h6>
+        </div>
+    </form>
+</body>
+</html>
