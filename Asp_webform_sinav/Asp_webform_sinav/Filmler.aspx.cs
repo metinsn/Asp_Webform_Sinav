@@ -35,11 +35,12 @@ namespace Asp_webform_sinav
                     using (EntityModel database = new EntityModel())
                     {
                         var deger = database.Movie.Find(gid);
+
                         txtFilmAdi.Text = deger.FilmAdi;
                         txtFilmYili.Text = Convert.ToString(deger.FilmYili);
                         txtFilmTuru.Text = deger.FilmTuru;
-                        //txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenID);
-                        //txtFilmAktor.Text = Convert.ToString(deger.aktor);
+                        //txtFilmYönetmen.Text = yonetmen.YonetmenAdi;
+                        //txtFilmAktor.Text = aktor.AktorAdi;
 
                     }
                 }
@@ -55,14 +56,16 @@ namespace Asp_webform_sinav
                 {
                     Models.Movie film = new Models.Movie();
                     Models.Actor aktor = new Models.Actor();
-                    Models.Actor yonetmen = new Models.Actor();
+                    Models.Director yonetmen = new Models.Director();
                     film.FilmAdi = txtFilmAdi.Text;
                     film.FilmYili = txtFilmYili.Text;
                     film.FilmTuru = txtFilmTuru.Text;
-                    //film.YonetmenID = txtFilmYönetmen.Text;
-                    //film.aktor = txtFilmAktor.Text;
+                    yonetmen.YonetmenAdi = txtFilmYönetmen.Text;
+                    aktor.AktorAdi = txtFilmAktor.Text;
 
                     database.Movie.Add(film);
+                    database.Actor.Add(aktor);
+                    database.Director.Add(yonetmen);
                     database.SaveChanges();
                 }
                 Response.Redirect("Filmler.aspx");
