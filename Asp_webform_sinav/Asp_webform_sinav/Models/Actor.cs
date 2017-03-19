@@ -13,5 +13,7 @@ namespace Asp_webform_sinav.Models
         public string AktorAdi { get; set; }
         public string AktorDogumYili { get; set; }
         public string AktorFilmRolu { get; set; }
+
+        //public virtual Movie Filmleri { get; set; }
     }
 }

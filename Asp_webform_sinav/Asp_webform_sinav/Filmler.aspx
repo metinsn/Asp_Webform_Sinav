@@ -59,8 +59,8 @@
                         <thead style="color: slateblue">
                             <tr>
                                 <th>Film Adı</th>
-                                <th>Film Saati</th>
-                                <th>Film Ücreti</th>
+                                <th>Film Yılı</th>
+                                <th>Film Türü</th>
                                 <th>Sil    -    Güncelle</th>
                             </tr>
                         </thead>
@@ -71,11 +71,11 @@
                                         <td><%#Eval("FilmAdi") %></td>
                                         <td><%#Eval("FilmYili") %></td>
                                         <td><%#Eval("FilmTuru") %></td>
-                                        <td><%#Eval("YonetmenNo") %></td>
-                                        <td><%#Eval("AktorNo") %></td>
+                                       <%-- <td><%#Eval("YonetmenNo") %></td>
+                                        <td><%#Eval("AktorNo") %></td>--%>
                                         <td>
-                                            <a href="Filmlar.aspx?ID=<%#Eval("FilmNo") %>" class="btn btn-primary">Sil</a>
-                                             <a href="Filmlar.aspx?GID=<%#Eval("FilmNo") %>" class="btn btn-success">Güncelle</a>
+                                            <a href="Filmler.aspx?ID=<%#Eval("FilmNo") %>" class="btn btn-primary">Sil</a>
+                                             <a href="Filmler.aspx?GID=<%#Eval("FilmNo") %>" class="btn btn-success">Güncelle</a>
                                         </td>
                                     </tr>
                                 </ItemTemplate>

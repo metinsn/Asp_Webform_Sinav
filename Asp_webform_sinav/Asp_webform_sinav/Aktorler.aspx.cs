@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Asp_webform_sinav
 {
@@ -6,11 +7,11 @@ namespace Asp_webform_sinav
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //using (EntityModel Database = new EntityModel())
-            //{
-            //    Tekrar1.DataSource = Database.Movie.ToList();
-            //    Tekrar1.DataBind();
-            //}
+            using (EntityModel Database = new EntityModel())
+            {
+                Tekrar1.DataSource = Database.Actor.ToList();
+                Tekrar1.DataBind();
+            }
 
             if (!IsPostBack)
             {
@@ -36,8 +37,7 @@ namespace Asp_webform_sinav
                         var deger = database.Actor.Find(gid);
                         txtAktorAdi.Text = deger.AktorAdi;
                         txtAktorDogYili.Text = Convert.ToString(deger.AktorDogumYili);
-                        txtAktorRolu.Text = deger.AktorFilmRolu;
-                        
+                        txtAktorRolu.Text = deger.AktorFilmRolu;                       
 
                     }
                 }

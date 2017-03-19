@@ -14,15 +14,15 @@
 </head>
 <body>
 
-    <div class="col-lg-12" style="border: double; background-color: aqua; text-align: center; font-style: italic; font-size-adjust: inherit">
-        <h1>IMDB Film Arşiv Sitesi</h1>
+    <div class="col-lg-12" style="border-style:groove; border-color: inherit; border-radius:25px; background-color: antiquewhite; text-align: center; font-style: italic; font-size-adjust: inherit; top: 0px; left: 0px;">
+        <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">IMDB Film Arşiv Sitesi</h1>
     </div>
 
-    <div class="col-lg-12" style="background-color:aquamarine;border:medium;text-align:left">
-        <h4 style="text-align:left;color:blueviolet">Sayfalar   :</h4>
-        <button type="button" class="btn btn-warning">Filmler</button>
-        <button type="button" class="btn btn-warning">Yönetmenler</button>
-        <button type="button" class="btn btn-warning">Aktörler</button>
+    <div class="col-lg-12" style="border-style: none; border-color: inherit; border-width: medium; background-color:azure; text-align: left; top: 0px; left: 0px;">
+        <a href="Filmler.aspx" class="btn btn-info">Filmler</a>
+        <a href="Aktorler.aspx" class="btn btn-info">Aktörler</a>
+        <a href="Yonetmen.aspx" class="btn btn-info">Yönetmenler</a>
+
     </div>
 
     <form id="form1" runat="server">
@@ -30,9 +30,9 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <div class="col-lg-12" style="border: double; background-color: burlywood; text-align: center; font-style: italic; font-size-adjust: inherit">
+        <div class="col-lg-12" style="border: double; background-color: azure; text-align: center; font-style: italic; font-size-adjust: inherit">
             <h4>HAKKINDA :</h4>
-            <h6>Kullanım Hakkı Yoktur free'dir isteyen alabilir.</h6>
+            <h5>Kullanım Hakkı Yoktur free'dir isteyen alabilir.</h5>
         </div>
     </form>
 </body>

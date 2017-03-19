@@ -10,6 +10,8 @@ namespace Asp_webform_sinav.Models
     {
         [Key]
         public int YonetmenNo { get; set; }
-        public string YonetmenAdi { get; set; }        
+        public string YonetmenAdi { get; set; }
+
+        //public virtual Movie Filmleri { get; set; }
     }
 }

@@ -160,6 +160,7 @@
     <Compile Include="Filmler.aspx.designer.cs">
       <DependentUpon>Filmler.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\Director.cs" />
     <Compile Include="Models\Movie.cs" />

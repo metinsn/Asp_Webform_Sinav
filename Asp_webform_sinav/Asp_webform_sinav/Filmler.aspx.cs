@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Asp_webform_sinav
 {
@@ -6,11 +7,11 @@ namespace Asp_webform_sinav
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //using (EntityModel Database = new EntityModel())
-            //{
-            //    Tekrar1.DataSource = Database.Movie.ToList();
-            //    Tekrar1.DataBind();
-            //}
+            using (EntityModel Database = new EntityModel())
+            {
+                Tekrar1.DataSource = Database.Movie.ToList();
+                Tekrar1.DataBind();
+            }
 
             if (!IsPostBack)
             {
@@ -37,8 +38,8 @@ namespace Asp_webform_sinav
                         txtFilmAdi.Text = deger.FilmAdi;
                         txtFilmYili.Text = Convert.ToString(deger.FilmYili);
                         txtFilmTuru.Text = deger.FilmTuru;
-                        txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenNo);
-                        txtFilmAktor.Text = Convert.ToString(deger.AktorNo);
+                        //txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenNo);
+                        //txtFilmAktor.Text = Convert.ToString(deger.AktorNo);
 
                     }
                 }
@@ -47,7 +48,7 @@ namespace Asp_webform_sinav
 
         protected void butonKaydet_Click(object sender, EventArgs e)
         {
-            if (txtFilmAdi.Text != "" && txtFilmYili.Text != "" && txtFilmTuru.Text != "" && txtFilmYönetmen.Text != "" && txtFilmAktor.Text != "")
+            if (txtFilmAdi.Text != "" && txtFilmYili.Text != "" && txtFilmTuru.Text != "" ) /*&& txtFilmYönetmen.Text != "" && txtFilmAktor.Text != "")*/
             {
 
                 using (EntityModel database = new EntityModel())
@@ -56,8 +57,8 @@ namespace Asp_webform_sinav
                     film.FilmAdi = txtFilmAdi.Text;
                     film.FilmYili = txtFilmYili.Text;
                     film.FilmTuru = txtFilmTuru.Text;
-                    film.YonetmenNo = Convert.ToInt32(txtFilmYönetmen.Text);
-                    film.AktorNo = Convert.ToInt32(txtFilmAktor.Text);
+                    //film.YonetmenNo = txtFilmYönetmen.Text;
+                    //film.AktorNo = txtFilmAktor.Text;
 
                     database.Movie.Add(film);
                     database.SaveChanges();
@@ -78,8 +79,8 @@ namespace Asp_webform_sinav
                     txtFilmAdi.Text = deger.FilmAdi;
                     txtFilmYili.Text = Convert.ToString(deger.FilmYili);
                     txtFilmTuru.Text = deger.FilmTuru;
-                    txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenNo);
-                    txtFilmAktor.Text = Convert.ToString(deger.AktorNo);
+                    //txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenNo);
+                    //txtFilmAktor.Text = Convert.ToString(deger.AktorNo);
 
                     database.SaveChanges();
                 }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Asp_webform_sinav
@@ -11,11 +8,11 @@ namespace Asp_webform_sinav
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //using (EntityModel Database = new EntityModel())
-            //{
-            //    Tekrar1.DataSource = Database.Director.ToList();
-            //    Tekrar1.DataBind();
-            //}
+            using (EntityModel Database = new EntityModel())
+            {
+                Tekrar1.DataSource = Database.Director.ToList();
+                Tekrar1.DataBind();
+            }
 
             if (!IsPostBack)
             {

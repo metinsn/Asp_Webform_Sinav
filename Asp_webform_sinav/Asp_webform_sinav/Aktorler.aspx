@@ -44,6 +44,7 @@
                                 <th>Aktor Adı</th>
                                 <th>Aktor Doğum Yılı</th>
                                 <th>Aktor Rolü</th>
+                              <%--  <th>Aktor Filmler</th>--%>
                                 <th>Sil    -    Güncelle</th>
                             </tr>
                         </thead>
@@ -54,6 +55,7 @@
                                         <td><%#Eval("AktorAdi") %></td>
                                         <td><%#Eval("AktorDogumYili") %></td>
                                         <td><%#Eval("AktorFilmRolu") %></td>
+                                       <%-- <td><%#Eval("Filmleri") %></td>--%>
                                         <td>
                                             <a href="Aktorlar.aspx?ID=<%#Eval("AktorNo") %>" class="btn btn-primary">Sil</a>
                                              <a href="Aktorlar.aspx?GID=<%#Eval("AktorNo") %>" class="btn btn-success">Güncelle</a>
