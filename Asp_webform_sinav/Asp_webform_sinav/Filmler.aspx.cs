@@ -38,8 +38,8 @@ namespace Asp_webform_sinav
                         txtFilmAdi.Text = deger.FilmAdi;
                         txtFilmYili.Text = Convert.ToString(deger.FilmYili);
                         txtFilmTuru.Text = deger.FilmTuru;
-                        //txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenNo);
-                        //txtFilmAktor.Text = Convert.ToString(deger.AktorNo);
+                        //txtFilmYönetmen.Text = Convert.ToString(deger.YonetmenID);
+                        //txtFilmAktor.Text = Convert.ToString(deger.aktor);
 
                     }
                 }
@@ -54,11 +54,13 @@ namespace Asp_webform_sinav
                 using (EntityModel database = new EntityModel())
                 {
                     Models.Movie film = new Models.Movie();
+                    Models.Actor aktor = new Models.Actor();
+                    Models.Actor yonetmen = new Models.Actor();
                     film.FilmAdi = txtFilmAdi.Text;
                     film.FilmYili = txtFilmYili.Text;
                     film.FilmTuru = txtFilmTuru.Text;
-                    //film.YonetmenNo = txtFilmYönetmen.Text;
-                    //film.AktorNo = txtFilmAktor.Text;
+                    //film.YonetmenID = txtFilmYönetmen.Text;
+                    //film.aktor = txtFilmAktor.Text;
 
                     database.Movie.Add(film);
                     database.SaveChanges();

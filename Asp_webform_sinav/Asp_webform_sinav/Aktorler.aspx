@@ -57,8 +57,8 @@
                                         <td><%#Eval("AktorFilmRolu") %></td>
                                        <%-- <td><%#Eval("Filmleri") %></td>--%>
                                         <td>
-                                            <a href="Aktorlar.aspx?ID=<%#Eval("AktorNo") %>" class="btn btn-primary">Sil</a>
-                                             <a href="Aktorlar.aspx?GID=<%#Eval("AktorNo") %>" class="btn btn-success">Güncelle</a>
+                                            <a href="Aktorler.aspx?ID=<%#Eval("AktorID") %>" class="btn btn-primary">Sil</a>
+                                             <a href="Aktorler.aspx?GID=<%#Eval("AktorID") %>" class="btn btn-success">Güncelle</a>
                                         </td>
                                     </tr>
                                 </ItemTemplate>

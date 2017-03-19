@@ -35,7 +35,7 @@
                             <asp:Label ID="Etiket4" runat="server" Text="Yönetmen :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtFilmYönetmen" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox ID="txtFilmYönetmen" CssClass="form-control" runat="server" ></asp:TextBox>
                         </td>
                     </tr>
              <tr>
@@ -43,7 +43,7 @@
                             <asp:Label ID="Etiket5" runat="server" Text="Aktör :" Font-Size=" 25px" Font-Italic="true"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtFilmAktor" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox ID="txtFilmAktor" CssClass="form-control" runat="server" ></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -74,8 +74,8 @@
                                        <%-- <td><%#Eval("YonetmenNo") %></td>
                                         <td><%#Eval("AktorNo") %></td>--%>
                                         <td>
-                                            <a href="Filmler.aspx?ID=<%#Eval("FilmNo") %>" class="btn btn-primary">Sil</a>
-                                             <a href="Filmler.aspx?GID=<%#Eval("FilmNo") %>" class="btn btn-success">Güncelle</a>
+                                            <a href="Filmler.aspx?ID=<%#Eval("FilmID") %>" class="btn btn-primary">Sil</a>
+                                             <a href="Filmler.aspx?GID=<%#Eval("FilmID") %>" class="btn btn-success">Güncelle</a>
                                         </td>
                                     </tr>
                                 </ItemTemplate>

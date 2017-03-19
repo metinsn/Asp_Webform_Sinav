@@ -36,8 +36,8 @@
                                         <td><%#Eval("YonetmenAdi") %></td>
                                         
                                         <td>
-                                            <a href="Yonetmen.aspx?ID=<%#Eval("YonetmenNo") %>" class="btn btn-primary">Sil</a>
-                                             <a href="Yonetmen.aspx?GID=<%#Eval("YonetmenNo") %>" class="btn btn-success">Güncelle</a>
+                                            <a href="Yonetmen.aspx?ID=<%#Eval("YonetmenID") %>" class="btn btn-primary">Sil</a>
+                                             <a href="Yonetmen.aspx?GID=<%#Eval("YonetmenID") %>" class="btn btn-success">Güncelle</a>
                                         </td>
                                     </tr>
                                 </ItemTemplate>
