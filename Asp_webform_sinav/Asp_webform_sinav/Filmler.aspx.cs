@@ -49,7 +49,7 @@ namespace Asp_webform_sinav
 
         protected void butonKaydet_Click(object sender, EventArgs e)
         {
-            if (txtFilmAdi.Text != "" && txtFilmYili.Text != "" && txtFilmTuru.Text != "" ) /*&& txtFilmYönetmen.Text != "" && txtFilmAktor.Text != "")*/
+            if (txtFilmAdi.Text != "" && txtFilmYili.Text != "" && txtFilmTuru.Text != "" && txtFilmYönetmen.Text != "" && txtFilmAktor.Text != "")
             {
 
                 using (EntityModel database = new EntityModel())
